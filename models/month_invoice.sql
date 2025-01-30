@@ -15,7 +15,7 @@ WITH aggregated_invoice AS (
         SUM(total_value) AS total_value,  -- Summing total values
         SUM(total_margin) AS total_margin,  -- Summing total margins
         SUM(total_order) AS total_order  -- Summing total orders
-    FROM SNOWFLAKE_CASE_STUDY.STAGE.day_invoice  -- Using the existing day_invoice data
+    FROM SNOWFLAKE_CASESTUDY.STAGE.day_invoice  -- Using the existing day_invoice data
     GROUP BY
         transaction_month,
         customer_country_code,
