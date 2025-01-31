@@ -1,0 +1,17 @@
+version: 2
+ 
+models:
+  # Customer Master Model
+  - name: customer_master
+    description: "This view aggregates customer details from various sources and augments them with country dialing codes."
+    columns:
+      - name: cust_number
+        description: "Unique identifier for each customer."
+      - name: cust_name
+        description: "Full name of the customer, concatenated from the first and last name."
+      - name: cust_location
+        description: "The location of the customer (e.g., city)."
+      - name: cust_country
+        description: "The country where the customer is located."
+      - name: cust_country_code
+        description: "The international dialing code for the customer's country, derived from the country reference table."
